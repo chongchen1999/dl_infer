@@ -1,0 +1,15 @@
+{
+    "files.associations": {
+        "array": "cpp",
+        "string": "cpp",
+        "string_view": "cpp",
+        "span": "cpp",
+        "iterator": "cpp",
+        "vector": "cpp",
+        "iosfwd": "cpp",
+        "iostream": "cpp",
+        "cstddef": "cpp"
+    },
+    "testMate.cpp.test.executables": "/home/tourist/diy/cs/advanced/kuiperbook/build/*/*",
+    "testMate.cpp.test.workingDirectory": "${absDirpath}"
+}
