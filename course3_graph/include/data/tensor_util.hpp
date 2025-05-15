@@ -23,9 +23,9 @@ std::tuple<sftensor, sftensor> TensorBroadcast(const sftensor& tensor1,
  * @param padding_value 填充的值
  * @return 填充之后的张量
  */
-std::shared_ptr<Tensor<float>> TensorPadding(
-    const std::shared_ptr<Tensor<float>>& tensor,
-    const std::vector<uint32_t>& pads, float padding_value);
+std::shared_ptr<Tensor<float>>
+TensorPadding(const std::shared_ptr<Tensor<float>>& tensor,
+              const std::vector<uint32_t>& pads, float padding_value);
 
 /**
  * 比较tensor的值是否相同
@@ -44,9 +44,9 @@ bool TensorIsSame(const std::shared_ptr<Tensor<float>>& a,
  * @param tensor2 输入张量2
  * @return 张量相加的结果
  */
-std::shared_ptr<Tensor<float>> TensorElementAdd(
-    const std::shared_ptr<Tensor<float>>& tensor1,
-    const std::shared_ptr<Tensor<float>>& tensor2);
+std::shared_ptr<Tensor<float>>
+TensorElementAdd(const std::shared_ptr<Tensor<float>>& tensor1,
+                 const std::shared_ptr<Tensor<float>>& tensor2);
 
 /**
  * 张量相加
@@ -74,9 +74,9 @@ void TensorElementMultiply(const std::shared_ptr<Tensor<float>>& tensor1,
  * @param tensor2 输入张量2
  * @return 张量相乘的结果
  */
-std::shared_ptr<Tensor<float>> TensorElementMultiply(
-    const std::shared_ptr<Tensor<float>>& tensor1,
-    const std::shared_ptr<Tensor<float>>& tensor2);
+std::shared_ptr<Tensor<float>>
+TensorElementMultiply(const std::shared_ptr<Tensor<float>>& tensor1,
+                      const std::shared_ptr<Tensor<float>>& tensor2);
 
 /**
  * 创建一个张量
@@ -93,16 +93,16 @@ std::shared_ptr<Tensor<float>> TensorCreate(uint32_t channels, uint32_t rows,
  * @param shapes 张量的形状
  * @return 创建后的张量
  */
-std::shared_ptr<Tensor<float>> TensorCreate(
-    const std::vector<uint32_t>& shapes);
+std::shared_ptr<Tensor<float>>
+TensorCreate(const std::vector<uint32_t>& shapes);
 
 /**
  * 返回一个深拷贝后的张量
  * @param 待Clone的张量
  * @return 新的张量
  */
-std::shared_ptr<Tensor<float>> TensorClone(
-    std::shared_ptr<Tensor<float>> tensor);
+std::shared_ptr<Tensor<float>>
+TensorClone(std::shared_ptr<Tensor<float>> tensor);
 
-}  // namespace kuiper_infer
-#endif  // KUIPER_INFER_TENSOR_UTIL_H
+} // namespace kuiper_infer
+#endif // KUIPER_INFER_TENSOR_UTIL_H
